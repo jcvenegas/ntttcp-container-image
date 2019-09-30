@@ -11,6 +11,6 @@ RUN make
 FROM ubuntu
 WORKDIR /run
 COPY --from=ntttcp  /ntttcp-for-linux/src/ntttcp .
-RUN apt-get update && apt-get install dnsutils
+RUN apt-get update && apt-get install -y dnsutils
 
 ENTRYPOINT ["/run/ntttcp"]
